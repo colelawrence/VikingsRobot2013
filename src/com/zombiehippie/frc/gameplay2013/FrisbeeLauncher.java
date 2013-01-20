@@ -12,10 +12,11 @@ package com.zombiehippie.frc.gameplay2013;
  * @author Cole
  */
 public class FrisbeeLauncher {
-    // We will probably need to define our robot's control center here
-    // final robotControlCenter robot;
+    // Control our robot
+    final RobotControl robotControl;
+    // Later we will need to add hooks for physical connections on the robot
     
-    public FrisbeeLauncher(){
-        
+    public FrisbeeLauncher(RobotControl robotcontrol){
+        robotControl = robotcontrol;
     }
 }
