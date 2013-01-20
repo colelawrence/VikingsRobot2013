@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.components;
+package vikingbot2013.components;
 
-import vikingrobotics.frc2013.RobotControl;
-import vikingrobotics.frc2013.components.LimitedValue;
-import vikingrobotics.frc2013.components.Limited;
-import vikingrobotics.frc2013.components.Motor;
+import vikingbot2013.RobotControl;
+import vikingbot2013.components.LimitedValue;
+import vikingbot2013.components.Limited;
+import vikingbot2013.components.Motor;
 
 /**
  * This class contains all of our driving information and hook-ups

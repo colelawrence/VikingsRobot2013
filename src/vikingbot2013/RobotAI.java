@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingbot2013;
 
-import vikingrobotics.frc2013.userinput.UserInput;
+import vikingbot2013.userinput.UserInput;
 
 /**
  * This is what I envision the gameplay class to be.

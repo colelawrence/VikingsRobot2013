@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.components;
+package vikingbot2013.components;
 
 /**
  * Anything that has a changeable value should extend this class

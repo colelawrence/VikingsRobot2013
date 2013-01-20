@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.maps;
+package vikingbot2013.maps;
 
 /**
  * Random constants for our robot

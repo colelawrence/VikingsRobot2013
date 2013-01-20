@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingbot2013;
 
-import vikingrobotics.frc2013.components.FrisbeeLauncher;
+import vikingbot2013.components.FrisbeeLauncher;
 
 /**
  * This class is kind of imaginary for the moment and will contain the inactive

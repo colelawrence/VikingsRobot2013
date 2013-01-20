@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingbot2013;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import vikingrobotics.frc2013.userinput.UserInput;
+import vikingbot2013.userinput.UserInput;
 /**
  * This class is used to glue our robot's objects together.
  * 

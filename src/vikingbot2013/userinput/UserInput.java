@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.userinput;
+package vikingbot2013.userinput;
 
-import vikingrobotics.frc2013.Robot;
+import vikingbot2013.Robot;
 
 /**
  *

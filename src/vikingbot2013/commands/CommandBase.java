@@ -2,8 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.commands;
-import vikingrobotics.frc2013.RobotCommander;
+package vikingbot2013.commands;
+import vikingbot2013.RobotCommander;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 

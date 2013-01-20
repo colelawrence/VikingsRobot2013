@@ -2,10 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingbot2013;
 
 // We are going need all them commands
-import vikingrobotics.frc2013.commands.*;
 
 /**
  * This is the glue that sticks all of the robot commands together

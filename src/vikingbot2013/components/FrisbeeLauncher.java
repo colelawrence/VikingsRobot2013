@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013.components;
+package vikingbot2013.components;
 
-import vikingrobotics.frc2013.RobotControl;
+import vikingbot2013.RobotControl;
 
 /**
  * This is the Frisbee Launcher Object's Class

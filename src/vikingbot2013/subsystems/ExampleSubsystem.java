@@ -1,5 +1,5 @@
 
-package com.wikispaces.team1777.vikingbot2013.subsystems;
+package vikingbot2013.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
