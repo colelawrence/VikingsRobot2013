@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zombiehippie.frc.gameplay2013;
+package vikingrobotics.frc2013;
 
 /**
  * This object is used to glue all of our other objects together.

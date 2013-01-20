@@ -22,14 +22,14 @@ local.properties
 # Locally stored "Eclipse launch configurations"
 *.launch
 
-############
-# NetBeans
-############
+#############
+## NetBeans
+#############
 
 # Build output directories
 build/
 dist/
-nbproject/private/
+nbproject/
 
 ############
 ## Windows

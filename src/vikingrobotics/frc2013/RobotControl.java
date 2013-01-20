@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.zombiehippie.frc.gameplay2013;
+package vikingrobotics.frc2013;
 
 /**
  * This class is kind of imaginary for the moment and will contain the inactive
