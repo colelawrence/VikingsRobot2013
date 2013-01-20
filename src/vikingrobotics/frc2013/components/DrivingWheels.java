@@ -5,8 +5,8 @@
 package vikingrobotics.frc2013.components;
 
 import vikingrobotics.frc2013.RobotControl;
-import vikingrobotics.frc2013.components.Adjuster;
-import vikingrobotics.frc2013.components.Adjustable;
+import vikingrobotics.frc2013.components.LimitedValue;
+import vikingrobotics.frc2013.components.Limited;
 import vikingrobotics.frc2013.components.Motor;
 
 /**
@@ -15,7 +15,7 @@ import vikingrobotics.frc2013.components.Motor;
  * 
  * @author Cole
  */
-public class DrivingWheels extends Adjustable{    
+public class DrivingWheels extends Limited{    
     // Initialize our wheels
     private final Motor rightSideDriving;
     private final Motor leftSideDriving;
@@ -26,7 +26,7 @@ public class DrivingWheels extends Adjustable{
     // (-.5,  0)    L0  R^
     // (0,   .5)    L^  R0
     // (.5,   1]    L^  Rv
-    private Adjuster veer = new Adjuster();
+    private LimitedValue veer = new LimitedValue();
     
     /**
      * Update the veer, and the speed of the robot by joystick control

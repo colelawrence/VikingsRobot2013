@@ -8,7 +8,7 @@ package vikingrobotics.frc2013.components;
  * The base of the Adjust class without an update feature
  * @author Cole
  */
-public class Adjuster extends Adjustable{
+public class LimitedValue extends Limited{
     
     public void update(){
         

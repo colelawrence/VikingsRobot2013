@@ -13,7 +13,7 @@ package vikingrobotics.frc2013.components;
  * 
  * @author Cole
  */
-public abstract class Adjustable {
+public abstract class Limited {
     // Make variables private when possible
     // All adjustments should be made through functions on this page
     private float value = 0;

@@ -11,7 +11,7 @@ import vikingrobotics.frc2013.RobotControl;
  * voltage conversion factors
  * @author Cole
  */
-public class Motor extends Adjustable{
+public class Motor extends Limited{
     
     private final float multiplier;
     private final int componentID;
