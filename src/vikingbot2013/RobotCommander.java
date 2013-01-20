@@ -4,6 +4,8 @@
  */
 package vikingbot2013;
 
+import vikingbot2013.commands.userinput.DriveWithJoystick;
+
 // We are going need all them commands
 
 /**
@@ -12,16 +14,17 @@ package vikingbot2013;
  */
 public class RobotCommander {
     private final Robot robot;
+    
+    // User input commands
+    private final DriveWithJoystick driveWithJoystick;
+    
     public RobotCommander(Robot r){
        robot = r;
+       driveWithJoystick = new DriveWithJoystick(robot);
     }
     
-    /**
-     * Will command to start throwing a Frisbee. If the Frisbee is not ready it
-     * will not be thrown unless it is forced
-     * @param force Force throw the Frisbee
-     */
-    public void launchFrisbee(boolean force) {
-        
+    
+    public DriveWithJoystick getDriveWithJoystick(){
+        return driveWithJoystick;
     }
 }

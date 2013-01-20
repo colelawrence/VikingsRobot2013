@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingbot2013.components;
+package vikingbot2013.subsystems;
 
 import vikingbot2013.RobotControl;
 

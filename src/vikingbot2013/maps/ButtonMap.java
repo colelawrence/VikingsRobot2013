@@ -15,9 +15,6 @@ public interface ButtonMap {
      *   
      */
     
-    public static final float JOYSTICK_THRESHOLD            =   0.2f;
-    
-    
     public static final int USER_GAMEPAD_AXIS_LEFT_STICK_X  =   1;
     public static final int USER_GAMEPAD_AXIS_LEFT_STICK_Y  =   2;
     public static final int USER_GAMEPAD_AXIS_TRIGGER       =   3;

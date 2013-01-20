@@ -4,7 +4,8 @@
  */
 package vikingbot2013;
 
-import vikingbot2013.components.FrisbeeLauncher;
+import vikingbot2013.subsystems.DriveTrain;
+import vikingbot2013.maps.RobotMap;
 
 /**
  * This class is kind of imaginary for the moment and will contain the inactive
@@ -16,23 +17,16 @@ import vikingbot2013.components.FrisbeeLauncher;
 public class RobotControl {
     private final Robot robot;
     
-    // Frisbee Launcher controls
-    private final FrisbeeLauncher frisbeeLauncher; 
+    // Subsystems
+    private final DriveTrain driveTrain; 
     
     public RobotControl(Robot therobot){
         robot = therobot;
-        frisbeeLauncher = new FrisbeeLauncher(this);
+        driveTrain = new DriveTrain(robot, RobotMap.DRIVING_WHEELS_LEFT_PORT, RobotMap.DRIVING_WHEELS_RIGHT_PORT);
     }
     
-    /**
-     * Component Output Manipulation.
-     * Manipulate power going towards different components
-     * 
-     * @param cID the component's id assigned at initialization
-     * @param change the change in value. This can range a great deal depending on what kind of component it is
-     */
-    public void changeComponent(int cID, float change) {
-        
+    // Get the drive train subsystem
+    public DriveTrain getDriveTrain() {
+        return driveTrain;
     }
-    
 }
