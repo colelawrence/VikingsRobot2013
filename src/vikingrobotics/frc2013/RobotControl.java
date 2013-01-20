@@ -4,6 +4,8 @@
  */
 package vikingrobotics.frc2013;
 
+import vikingrobotics.frc2013.components.FrisbeeLauncher;
+
 /**
  * This class is kind of imaginary for the moment and will contain the inactive
  * code used to control the robot. We can start working on programming our robot

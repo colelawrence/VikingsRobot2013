@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingrobotics.frc2013.components;
 
 /**
  * Anything that has a changeable value should extend this class
@@ -13,7 +13,7 @@ package vikingrobotics.frc2013;
  * 
  * @author Cole
  */
-public abstract class Adjustable implements BackForthStop{
+public abstract class Adjustable {
     // Make variables private when possible
     // All adjustments should be made through functions on this page
     private float value = 0;
@@ -32,20 +32,6 @@ public abstract class Adjustable implements BackForthStop{
         // We will let the setCurrentValue(x) handle this request for
         // cleanliness.
         setValue(value + adjustment);
-    }
-    
-    // We can add the functions from BackForthStop now that we have our
-    // currentValue variable and update() function
-    // We use setValue(x) so as to not reinvent the wheel as they say.
-    // It limits us from using update() in every method also
-    public void BackwardsMotion(){
-        setValue(-1);
-    }
-    public void ForwardsMotion(){
-        setValue(+1);
-    }
-    public void Stop(){
-        setValue(0);
     }
     
     // We will need to use this method when we use update() in the child

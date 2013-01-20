@@ -2,7 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package vikingrobotics.frc2013;
+package vikingrobotics.frc2013.components;
+
+import vikingrobotics.frc2013.RobotControl;
+import vikingrobotics.frc2013.components.Adjuster;
+import vikingrobotics.frc2013.components.Adjustable;
+import vikingrobotics.frc2013.components.Motor;
 
 /**
  * This class contains all of our driving information and hook-ups
@@ -10,7 +15,7 @@ package vikingrobotics.frc2013;
  * 
  * @author Cole
  */
-public class DriveControl extends Adjustable{    
+public class DrivingWheels extends Adjustable{    
     // Initialize our wheels
     private final Motor rightSideDriving;
     private final Motor leftSideDriving;
@@ -57,7 +62,7 @@ public class DriveControl extends Adjustable{
      * @param rightSideCID the Component ID to assign our right side driving wheel
      * @param leftSideCID the Component ID to assign our left side driving wheel
      */
-    public DriveControl(RobotControl robotcontrol, int rightSideCID, int leftSideCID) {
+    public DrivingWheels(RobotControl robotcontrol, int rightSideCID, int leftSideCID) {
         // Two 5v motors on either side of our robot
         rightSideDriving = new Motor(robotcontrol, rightSideCID, 5);
         leftSideDriving = new Motor(robotcontrol, leftSideCID, 5);
