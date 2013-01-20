@@ -29,23 +29,10 @@ public abstract class Speedable implements BackForthStop{
     }
     
     public void adjustCurrentSpeed(float adjustment) {
-        // Add Adjustments first then we can correct it next
-        currentSpeed += adjustment;
-        
-        // If the adjusted puts our speed out of range we put it in range and
-        // continue.
-        if(currentSpeed > 1) {
-            // Our adjustment was too high
-            currentSpeed = +1;
-        } else if (currentSpeed < -1) {
-            //Our adjustment was too low
-            currentSpeed = -1;
-        }
-        
-        // Our currentSpeed should be between [-1, +1] now.
-        updateSpeed();
+        // We will let the setCurrentSpeed(x) handle this request for
+        // cleanliness.
+        setCurrentSpeed(currentSpeed + adjustment);
     }
-    
     
     // We can add the functions from BackForthStop now that we have our
     // currentSpeed variable and updateSpeed() function
@@ -60,8 +47,6 @@ public abstract class Speedable implements BackForthStop{
     public void Stop(){
         setCurrentSpeed(0);
     }
-    
-    
     
     // The speed should only be updated by the class and its children. 
     // Updating is automatic upon adjustment and is carried out by the children
