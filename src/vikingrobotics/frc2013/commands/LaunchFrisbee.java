@@ -26,6 +26,8 @@ public class LaunchFrisbee extends CommandBase{
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        // Countdown or check absence of the fired disc
+        // Set isFinished = true;
     }
 
     // Make this return true when this Command no longer needs to run execute()

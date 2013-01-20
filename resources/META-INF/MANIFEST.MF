@@ -1,6 +1,6 @@
 MIDlet-Name: VikingsRobot2013
 MIDlet-Version: 1.0.0
 MIDlet-Vendor: FIRST
-MIDlet-1: RobotTemplate, , com.wikispaces.team1777.vikingbot2013.RobotTemplate
+MIDlet-1: Robot, , vikingrobotics.frc2013.Robot
 MicroEdition-Profile: IMP-1.0
 MicroEdition-Configuration: CLDC-1.1

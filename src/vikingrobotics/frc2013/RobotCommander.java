@@ -17,5 +17,12 @@ public class RobotCommander {
        robot = r;
     }
     
-    
+    /**
+     * Will command to start throwing a Frisbee. If the Frisbee is not ready it
+     * will not be thrown unless it is forced
+     * @param force Force throw the Frisbee
+     */
+    public void launchFrisbee(boolean force) {
+        
+    }
 }
