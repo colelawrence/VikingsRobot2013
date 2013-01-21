@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="lib" path="C:/Users/Cole/sunspotfrcsdk/lib/wpilibj.jar" sourcepath="C:/Users/Cole/sunspotfrcsdk/doc/javadoc"/>
+	<classpathentry kind="lib" path="C:/Users/Cole/sunspotfrcsdk/lib/wpilibj.jar" sourcepath="C:/Users/Cole/sunspotfrcsdk/lib/wpilibj.src.zip"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Cole/sunspotfrcsdk/lib/networktables-crio.jar" sourcepath="C:/Users/Cole/sunspotfrcsdk/lib/networktables-crio.src.zip"/>

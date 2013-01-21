@@ -4,6 +4,7 @@
  */
 package vikingbot2013;
 
+import vikingbot2013.commands.CommandBase;
 import edu.wpi.first.wpilibj.IterativeRobot;
 /**
  * This class is used to glue our robot's objects together.
@@ -13,11 +14,10 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  */
 public class AscentRobot extends IterativeRobot{
     private final RobotAI aI;
-    private final OI oI;
     
     public AscentRobot(){
-        // Initiallization of the robot's core
-    	oI = new OI(this);    	
+        // Initiallization of the robot's commands
+    	CommandBase.init();
         
         // RobotAI is everything the robot does and does not necessarily focus
         // on the Autonomous period
