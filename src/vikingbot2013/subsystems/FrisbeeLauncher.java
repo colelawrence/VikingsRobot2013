@@ -4,6 +4,7 @@
  */
 package vikingbot2013.subsystems;
 
+import edu.wpi.first.wpilibj.command.Subsystem;
 import vikingbot2013.RobotControl;
 
 /**
@@ -13,7 +14,7 @@ import vikingbot2013.RobotControl;
  *
  * @author Cole
  */
-public class FrisbeeLauncher {
+public class FrisbeeLauncher extends Subsystem{
     // Control our robot
     final RobotControl robotControl;
     // Later we will need to add hooks for physical connections on the robot
@@ -21,4 +22,9 @@ public class FrisbeeLauncher {
     public FrisbeeLauncher(RobotControl robotcontrol){
         robotControl = robotcontrol;
     }
+
+	@Override
+	protected void initDefaultCommand() {
+		
+	}
 }

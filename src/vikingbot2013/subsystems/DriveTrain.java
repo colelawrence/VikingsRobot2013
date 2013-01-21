@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package vikingbot2013.subsystems;
 
 import edu.wpi.first.wpilibj.Jaguar;
@@ -16,7 +12,7 @@ import vikingbot2013.maps.SettingsMap;
  * 
  * @author Cole
  */
-public class DriveTrain extends Subsystem{    
+public class DriveTrain extends Subsystem {    
     // Initialize our wheels
     private final Jaguar rightJag;
     private final Jaguar leftJag;

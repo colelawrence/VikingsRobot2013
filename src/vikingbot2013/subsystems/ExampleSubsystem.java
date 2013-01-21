@@ -1,4 +1,3 @@
-
 package vikingbot2013.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
