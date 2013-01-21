@@ -12,10 +12,8 @@ package vikingbot2013;
  */
 public class RobotAI {
 	// Called rC for less verbose references
-    private final RobotCommander rC;
     
-    public RobotAI(Robot robot){
-        rC = robot.getRobotCommander();
+    public RobotAI(AscentRobot robot){
     }
     
     public void init() {
@@ -24,9 +22,5 @@ public class RobotAI {
     
     public void run() {
         
-    }
-    
-    public void recordChanges() {
-    	rC.getDriveWithJoystick();
     }
 }

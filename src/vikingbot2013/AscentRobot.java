@@ -11,31 +11,30 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  * Almost no decision making/controlling should be made here.
  * @author Cole
  */
-public class Robot extends IterativeRobot{
-    private final RobotControl control;
-    private final RobotCommander commander;
-    private final RobotAI ai;
+public class AscentRobot extends IterativeRobot{
+    private final RobotAI aI;
+    private final OI oI;
     
-    public Robot(){
+    public AscentRobot(){
         // Initiallization of the robot's core
-        
-        // RobotControl handles Ports, and mechanical parts of the Robot
-        control = new RobotControl(this);
-        
-        // RobotCommander facilitates commands over the robot through user input and the gameplay mechanism
-        commander = new RobotCommander(this);
+    	oI = new OI(this);    	
         
         // RobotAI is everything the robot does and does not necessarily focus
         // on the Autonomous period
-        ai = new RobotAI(this);
+        aI = new RobotAI(this);
         
         // Start-up the AI
-        ai.init();
+        aI.init();
+    }
+    
+    public void run(){
+    	aI.run();
     }
     
     // This is where everything will start
     public static void initiallize(){
-        Robot robot = new Robot();
+        AscentRobot robot = new AscentRobot();
+        robot.run();
     }
     
     // Log our messages to the user
@@ -44,13 +43,7 @@ public class Robot extends IterativeRobot{
     }
     
     
-    public RobotCommander getRobotCommander(){
-        return commander;
-    }
-    public RobotControl getRobotControl(){
-        return control;
-    }
     public RobotAI getAI(){
-        return ai;
+        return aI;
     }
 }

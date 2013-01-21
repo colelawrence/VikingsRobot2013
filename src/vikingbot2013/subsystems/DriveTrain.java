@@ -2,9 +2,9 @@ package vikingbot2013.subsystems;
 
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import vikingbot2013.Robot;
-import vikingbot2013.Util;
-import vikingbot2013.maps.SettingsMap;
+import vikingbot2013.AscentRobot;
+import vikingbot2013.misc.SettingsMap;
+import vikingbot2013.misc.Util;
 
 /**
  * This class contains all of our driving information and hook-ups
@@ -16,7 +16,7 @@ public class DriveTrain extends Subsystem {
     // Initialize our wheels
     private final Jaguar rightJag;
     private final Jaguar leftJag;
-    private final Robot robot;
+    private final AscentRobot ar;
     
     // Declare our overall Driving Speed
     private float drivingSpeed = 0;
@@ -36,17 +36,16 @@ public class DriveTrain extends Subsystem {
      * @param rightJagCID the Component ID to assign our right side driving wheel
      * @param leftJagCID the Component ID to assign our left side driving wheel
      */
-    public DriveTrain(Robot r, int rightJagCID, int leftJagCID) {
-        // Two 5v motors on either side of our robot
+    public DriveTrain(AscentRobot r, int rightJagCID, int leftJagCID) {
+        // Two motors on either side of our robot
         rightJag = new Jaguar(rightJagCID);
         leftJag = new Jaguar(leftJagCID);
-        robot = r;
+        ar = r;
     }
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
-        setDefaultCommand(robot.getRobotCommander().getDriveWithJoystick());
     }
     
     
@@ -56,7 +55,7 @@ public class DriveTrain extends Subsystem {
      * @param xaxis the tilt of the Stick left and right
      * @param yaxis the tilt of the stick forwards and back
      */
-    public void updateFromJoystick(float xaxis, float yaxis) {
+    public void joyMove(float xaxis, float yaxis) {
         float x2 = xaxis * xaxis;
         float y2 = yaxis * yaxis;
         double dist = Math.sqrt(x2 + y2);
