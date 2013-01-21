@@ -4,8 +4,6 @@
  */
 package vikingbot2013;
 
-import vikingbot2013.userinput.UserInput;
-
 /**
  * This is what I envision the gameplay class to be.
  * This should be all autonomous decision making and robot controlled decisions
@@ -13,10 +11,11 @@ import vikingbot2013.userinput.UserInput;
  * @author Cole
  */
 public class RobotAI {
-    private final RobotControl robotcontrol;
+	// Called rC for less verbose references
+    private final RobotCommander rC;
     
     public RobotAI(Robot robot){
-        robotcontrol = robot.getRobotControl();
+        rC = robot.getRobotCommander();
     }
     
     public void init() {
@@ -27,4 +26,7 @@ public class RobotAI {
         
     }
     
+    public void recordChanges() {
+    	rC.getDriveWithJoystick();
+    }
 }

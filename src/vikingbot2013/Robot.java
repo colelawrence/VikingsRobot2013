@@ -5,7 +5,6 @@
 package vikingbot2013;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-import vikingbot2013.userinput.UserInput;
 /**
  * This class is used to glue our robot's objects together.
  * 
@@ -16,7 +15,6 @@ public class Robot extends IterativeRobot{
     private final RobotControl control;
     private final RobotCommander commander;
     private final RobotAI ai;
-    private final UserInput ui;
     
     public Robot(){
         // Initiallization of the robot's core
@@ -24,16 +22,12 @@ public class Robot extends IterativeRobot{
         // RobotControl handles Ports, and mechanical parts of the Robot
         control = new RobotControl(this);
         
-        // RobotCommander facilitates commands over the robot
+        // RobotCommander facilitates commands over the robot through user input and the gameplay mechanism
         commander = new RobotCommander(this);
         
         // RobotAI is everything the robot does and does not necessarily focus
         // on the Autonomous period
         ai = new RobotAI(this);
-        
-        // The user input is everything that is user controlled; gamepads,
-        // buttons, computer commands, etc. and it connects those with commands.
-        ui = new UserInput(this);
         
         // Start-up the AI
         ai.init();
