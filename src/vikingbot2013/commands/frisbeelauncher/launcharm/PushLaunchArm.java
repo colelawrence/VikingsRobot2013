@@ -1,17 +1,17 @@
-package vikingbot2013.commands.frisbeelauncher;
+package vikingbot2013.commands.frisbeelauncher.launcharm;
 
 import vikingbot2013.AscentRobot;
 import vikingbot2013.commands.CommandBase;
 import vikingbot2013.misc.K;
 
-public class LaunchFrisbee extends CommandBase {
+public class PushLaunchArm extends CommandBase {
 	@Override
 	protected void initialize() {
-		requires(frisbeeLauncher);
+		requires(launchArm);
 		setTimeout(K.TIME_FRISBEE_INDEXER_PUSH);
 		
 		
-		if(frisbeeLauncher.isLaunchReady() == false) {
+		if(launchArm.isLaunchReady() == false) {
 			AscentRobot.log("[LaunchFrisbee] Unable to launch frisbee. isLaunchReady() returned false.");
 			// if the frisbee is not ready we cannot launch it.
 			cancel();
@@ -19,13 +19,12 @@ public class LaunchFrisbee extends CommandBase {
 			return;
 		}
 		
-		frisbeeLauncher.launchFrisbeePush();
+		launchArm.launchFrisbeePush();
 	}
 
 	@Override
 	protected void execute() {
-		
-		
+		launchArm.launchFrisbeePush();
 	}
 
 	@Override
@@ -39,13 +38,13 @@ public class LaunchFrisbee extends CommandBase {
 		AscentRobot.log("[LaunchFrisbee] end()");
 		
 		// Stop frisbee indexing motor upon timeout
-		frisbeeLauncher.launchFrisbeeStop();
+		launchArm.launchFrisbeeStop();
 	}
 
 	@Override
 	protected void interrupted() {
 		// Our command was cancelled due to not being ready maybe
-		
+		launchArm.launchFrisbeeStop();
 	}
 
 }

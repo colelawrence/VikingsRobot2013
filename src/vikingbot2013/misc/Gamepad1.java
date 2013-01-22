@@ -1,24 +1,42 @@
 package vikingbot2013.misc;
 
-import vikingbot2013.commands.frisbeelauncher.LaunchFrisbee;
+import vikingbot2013.commands.driving.DriveBackward;
+import vikingbot2013.commands.driving.DriveForward;
+import vikingbot2013.commands.driving.StopDriving;
+import vikingbot2013.commands.driving.TurnLeft;
+import vikingbot2013.commands.driving.TurnRight;
+import vikingbot2013.commands.frisbeelauncher.launcharm.PushLaunchArm;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 public class Gamepad1 extends Joystick{
 	private final Button launchFrisbee = new JoystickButton(this, K.G1_LAUNCH_FRISBEE);
-	private final Button driveForward1s = new JoystickButton(this, K.G1_DRIVE_FORWARD_1s);
-	private final Button driveBackward1s = new JoystickButton(this, K.G1_DRIVE_BACKWARD_1s);
+	private final Button startLaunchWheels = new JoystickButton(this, K.G1_START_LAUNCH_WHEELS);
+	private final Button stopLaunchWheels = new JoystickButton(this, K.G1_STOP_LAUNCH_WHEELS);
+	private final Button driveForward = new JoystickButton(this, K.G1_DRIVE_FORWARD);
+	private final Button driveBackward = new JoystickButton(this, K.G1_DRIVE_BACKWARD);
 	private final Button driving = new JoystickButton(this, K.G1_DRIVING);
 	private final Button turning = new JoystickButton(this, K.G1_TURNING);
-	private final Button turnleft = new JoystickButton(this, K.G1_TURN_LEFT_1s);
-	private final Button turnright = new JoystickButton(this, K.G1_TURN_RIGHT_1s);
+	private final Button turnLeft = new JoystickButton(this, K.G1_TURN_LEFT);
+	private final Button turnRight = new JoystickButton(this, K.G1_TURN_RIGHT);
 	
 	public Gamepad1(int port) {
 		super(port);
+
+		launchFrisbee.whenPressed(new PushLaunchArm());
+		startLaunchWheels.whenPressed(new PushLaunchArm());
+		stopLaunchWheels.whenPressed(new PushLaunchArm());
 		
-		launchFrisbee.whenPressed(new LaunchFrisbee());
-		
+		// Driving buttons
+		driveForward.whenPressed(new DriveForward());
+		driveBackward.whenPressed(new DriveBackward());
+		turnLeft.whenPressed(new TurnLeft());
+		turnRight.whenPressed(new TurnRight());
+		driveForward.whenReleased(new StopDriving());
+		driveBackward.whenReleased(new StopDriving());
+		turnLeft.whenReleased(new StopDriving());
+		turnRight.whenReleased(new StopDriving());
 	}
 	
 	

@@ -3,7 +3,6 @@ package vikingbot2013.subsystems;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import vikingbot2013.misc.K;
-import vikingbot2013.misc.SettingsMap;
 import vikingbot2013.misc.Util;
 
 /**
@@ -66,7 +65,7 @@ public class DriveTrain extends Subsystem {
         
         // figure out the angle the stick is tilting in using the distance and 
         // the xaxis values
-        setVeer(Util.threshold( xaxis/(float)dist, SettingsMap.USER_JOYSTICK_THRESHOLD, 1f ));
+        setVeer(Util.threshold( xaxis/(float)dist, K.USER_JOYSTICK_THRESHOLD, 1f ));
         
         //update our motor speeds
         update();

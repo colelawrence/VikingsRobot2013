@@ -18,7 +18,7 @@ public interface K {
 	
 	public static final float TIME_FRISBEE_INDEXER_PUSH		= 0.5f;
 	
-	
+	public static final float USER_JOYSTICK_THRESHOLD = .2f;
 	
 	/*   
      *    PORTS		I创,  ,碻.  I创,  创T创  /创
@@ -63,12 +63,17 @@ public interface K {
      *				I I I^I I创 
      *   
      */
+
+	public static final int G1_START_LAUNCH_WHEELS	= USER_G1_BUTTON_START;
+	public static final int G1_STOP_LAUNCH_WHEELS	= USER_G1_BUTTON_BACK;
+	public static final int G1_LAUNCH_FRISBEE 		= USER_G1_BUTTON_X;
 	
-	public static final int G1_LAUNCH_FRISBEE 		= USER_G1_BUTTON_B;
-    public static final int G1_DRIVE_FORWARD_1s 	= USER_G1_BUTTON_B;
-    public static final int G1_DRIVE_BACKWARD_1s 	= USER_G1_BUTTON_BACK;
-    public static final int G1_TURN_RIGHT_1s 		= USER_G1_BUTTON_RB;
-    public static final int G1_TURN_LEFT_1s 		= USER_G1_BUTTON_LB;
+    public static final int G1_DRIVE_FORWARD 		= USER_G1_BUTTON_A;
+    public static final int G1_DRIVE_BACKWARD 		= USER_G1_BUTTON_B;
+    public static final int G1_TURN_RIGHT 			= USER_G1_BUTTON_RB;
+    public static final int G1_TURN_LEFT 			= USER_G1_BUTTON_LB;
     public static final int G1_TURNING 				= USER_G1_AXIS_RIGHT_STICK_X;
     public static final int G1_DRIVING 				= USER_G1_AXIS_LEFT_STICK_Y;
+
+
 }
