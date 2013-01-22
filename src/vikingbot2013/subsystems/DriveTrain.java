@@ -2,7 +2,7 @@ package vikingbot2013.subsystems;
 
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import vikingbot2013.AscentRobot;
+import vikingbot2013.misc.K;
 import vikingbot2013.misc.SettingsMap;
 import vikingbot2013.misc.Util;
 
@@ -16,7 +16,6 @@ public class DriveTrain extends Subsystem {
     // Initialize our wheels
     private final Jaguar rightJag;
     private final Jaguar leftJag;
-    private final AscentRobot ar;
     
     // Declare our overall Driving Speed
     private float drivingSpeed = 0;
@@ -32,15 +31,11 @@ public class DriveTrain extends Subsystem {
     /**
      * The Driver class to wrap the control of our two wheels together for
      * easier control and cleanliness
-     * 
-     * @param rightJagCID the Component ID to assign our right side driving wheel
-     * @param leftJagCID the Component ID to assign our left side driving wheel
      */
-    public DriveTrain(AscentRobot r, int rightJagCID, int leftJagCID) {
+    public DriveTrain() {
         // Two motors on either side of our robot
-        rightJag = new Jaguar(rightJagCID);
-        leftJag = new Jaguar(leftJagCID);
-        ar = r;
+        leftJag = new Jaguar(K.PORT_DRIVING_WHEELS_LEFT);
+        rightJag = new Jaguar(K.PORT_DRIVING_WHEELS_RIGHT);
     }
 
     public void initDefaultCommand() {
@@ -78,12 +73,24 @@ public class DriveTrain extends Subsystem {
     }
     
     /**
+     * Set both speed and veer with a single update()
+     * @param newSpeed speed of the robot [-1,+1]
+     * @param newVeer direction headed of the robot [-1,+1]
+     */
+    public void set(float newSpeed, float newVeer){
+        drivingSpeed = Util.bound(newSpeed);
+        veer = Util.bound(newVeer);
+        update();
+    }
+    
+    /**
      * Set our turning direction
      * @param newveer value between [-1,+1]
      */
     public void setVeer(float newveer) {
         //Just in case our veer is out of range we will bound it
         veer = Util.bound(newveer);
+        update();
     }
     public float getVeer() {
         return veer;
@@ -95,11 +102,14 @@ public class DriveTrain extends Subsystem {
     public void setSpeed(float newspeed) {
         //Just in case our speed is out of range we will bound it
         drivingSpeed = Util.bound(newspeed);
+        update();
     }
     public float getSpeed() {
         return drivingSpeed;
     }
-    
+    public void stop() {
+    	set(0,0);
+    }
     
     /**
      * Adjust the speed at which the robot's wheels are moving

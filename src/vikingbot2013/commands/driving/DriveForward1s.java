@@ -1,40 +1,41 @@
 package vikingbot2013.commands.driving;
 
 import vikingbot2013.commands.CommandBase;
+import vikingbot2013.misc.K;
 
-public class DriveForward1s extends CommandBase{
-	// Use 'countdown' to monitor time
-	private int countdown = 1000;
-	
+public class DriveForward1s extends CommandBase {
 	
 	@Override
 	protected void initialize() {
+		requires(driveTrain);
 		
+		// Set the speed of our drive wheels to default
+		// and set our veer to 0 to set direction forward
+		driveTrain.set(K.SPEED_DRIVE_WHEELS_DEFAULT, 0);
 		
+		// Stop Command after 1 second
+		setTimeout(1.0);
 	}
 
 	@Override
 	protected void execute() {
-		countdown--;
-		
+		// Tests?
 	}
 
 	@Override
 	protected boolean isFinished() {
-		// If our countdown reaches 0 then the command is complete
-		return countdown <= 0;
+		// Using a timeout to determine the end of our command
+		return false;
 	}
 
 	@Override
 	protected void end() {
-		// TODO Auto-generated method stub
-		
+		driveTrain.stop();
 	}
 
 	@Override
 	protected void interrupted() {
-		// TODO Auto-generated method stub
-		
+		// This might occur when another command takes over driving before timeout
 	}
 
 }

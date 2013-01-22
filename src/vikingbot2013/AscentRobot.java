@@ -17,7 +17,7 @@ public class AscentRobot extends IterativeRobot{
     
     public AscentRobot(){
         // Initiallization of the robot's commands
-    	CommandBase.init();
+    	CommandBase.init(this);
         
         // RobotAI is everything the robot does and does not necessarily focus
         // on the Autonomous period

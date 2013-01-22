@@ -6,22 +6,36 @@ package vikingbot2013.misc;
  *
  */
 public interface K {
+
+	//TODO Figure out these values
+
+	public static final float SPEED_DRIVE_WHEELS_DEFAULT	= 0.7f;
+	
+	public static final float SPEED_FRISBEE_LAUNCHER_WHEELS	= 1.0f;
+	public static final float SPEED_FRISBEE_INDEXER			= 0.5f;
+	public static final float SPEED_FRISBEE_LIFTER			= 0.5f; //Default is speed lifting
+	
+	
+	public static final float TIME_FRISBEE_INDEXER_PUSH		= 0.5f;
+	
+	
+	
 	/*   
-     *    PORTS      I´´,  ,´`.  I´´,  ´´T´´  /´´
-     *               I´´   `..'  I´`.    I    ..7
-     * 
+     *    PORTS		I´´,  ,´`.  I´´,  ´´T´´  /´´
+     *				I´´   `..'  I´`.    I    ..7
      * 
      */
 	public static final int PORT_DRIVING_WHEELS_LEFT		= 1; // PWM 1
 	public static final int PORT_DRIVING_WHEELS_RIGHT 		= 2; // PWM 2
 	public static final int PORT_FRISBEE_LAUNCHER_BELTCIM	= 3; // PWM 3
+	public static final int PORT_FRISBEE_LAUNCHER_INDEXER	= 4; // PWM 4
 	public static final int PORT_FRISBEE_LAUNCHER_LIFTER	= 4; // PWM 4
 	public static final int PORT_JOYSTICK_1					= 1; // Port 1
 		
 	
 	/*
-     *    BUTTONS   I´D  I  I  ´´T´´  ´´T´´  ,´`.  I`.I  /´´
-     *              I.D  `..I    I      I    `..´  I `I  ..7
+     *    BUTTONS	I´D  I  I  ´´T´´  ´´T´´  ,´`.  I`.I  /´´
+     *				I.D  `..I    I      I    `..´  I `I  ..7
      *   
      */
 
@@ -45,8 +59,8 @@ public interface K {
 
 	
 	/*
-     *    MAP       IVI .^. I´´,
-     *              I I I^I I´´ 
+     *    MAP		IVI .^. I´´,
+     *				I I I^I I´´ 
      *   
      */
 	
