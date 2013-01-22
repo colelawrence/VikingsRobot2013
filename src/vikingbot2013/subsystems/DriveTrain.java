@@ -89,7 +89,6 @@ public class DriveTrain extends Subsystem {
     public void setVeer(float newveer) {
         //Just in case our veer is out of range we will bound it
         veer = Util.bound(newveer);
-        update();
     }
     public float getVeer() {
         return veer;
@@ -101,7 +100,6 @@ public class DriveTrain extends Subsystem {
     public void setSpeed(float newspeed) {
         //Just in case our speed is out of range we will bound it
         drivingSpeed = Util.bound(newspeed);
-        update();
     }
     public float getSpeed() {
         return drivingSpeed;

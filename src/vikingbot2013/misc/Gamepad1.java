@@ -1,10 +1,8 @@
 package vikingbot2013.misc;
 
-import vikingbot2013.commands.driving.DriveBackward;
-import vikingbot2013.commands.driving.DriveForward;
+import vikingbot2013.commands.driving.Drive;
 import vikingbot2013.commands.driving.StopDriving;
-import vikingbot2013.commands.driving.TurnLeft;
-import vikingbot2013.commands.driving.TurnRight;
+import vikingbot2013.commands.driving.Turn;
 import vikingbot2013.commands.frisbeelauncher.launcharm.PushLaunchArm;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -29,10 +27,10 @@ public class Gamepad1 extends Joystick{
 		stopLaunchWheels.whenPressed(new PushLaunchArm());
 		
 		// Driving buttons
-		driveForward.whenPressed(new DriveForward());
-		driveBackward.whenPressed(new DriveBackward());
-		turnLeft.whenPressed(new TurnLeft());
-		turnRight.whenPressed(new TurnRight());
+		driveForward.whenPressed(new Drive(+1));
+		driveBackward.whenPressed(new Drive(-1));
+		turnLeft.whenPressed(new Turn(-1));
+		turnRight.whenPressed(new Turn(+1));
 		driveForward.whenReleased(new StopDriving());
 		driveBackward.whenReleased(new StopDriving());
 		turnLeft.whenReleased(new StopDriving());

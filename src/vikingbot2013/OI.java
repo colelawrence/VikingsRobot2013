@@ -15,11 +15,11 @@ import edu.wpi.first.wpilibj.Joystick;
 public class OI {
 	private SmartDash smartDash;
 	private Gamepad1 gamepad1;   // port 1
-	private Joystick gamepad2;   // port 1
-	private Joystick gamepad3;   // port 1
-	private DriverStation m_ds;
+	private Joystick gamepad2;   // port 2
+	private Joystick gamepad3;   // port 3
 
 	public OI() {
 		gamepad1 = new Gamepad1(K.PORT_JOYSTICK_1);
+		smartDash = new SmartDash();
 	}
 }
